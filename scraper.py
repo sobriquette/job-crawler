@@ -36,4 +36,5 @@ jobs = zip(job_titles, job_links)
 file = open('jobs.csv', 'w')
 with file:
 	writer = csv.writer(file)
+	writer.writerow('Job Title', 'URL')
 	writer.writerows(jobs)
