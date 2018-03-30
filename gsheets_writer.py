@@ -39,7 +39,7 @@ def get_credentials():
 
 	return credentials
 
-def main():
+def update_sheet():
 	credentials = get_credentials()
 	http = credentials.authorize(httplib2.Http())
 	discoveryUrl = ('https://sheets.googleapis.com/$discovery/rest?'
@@ -67,5 +67,5 @@ def main():
 
 	pprint(response)
 
-if __name__=="__main__":
-	main()
+def main():
+	update_sheet()
